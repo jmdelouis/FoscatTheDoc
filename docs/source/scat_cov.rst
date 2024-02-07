@@ -204,48 +204,45 @@ Python Module Documentation
    .. method:: eval(self, image1, image2, mask, norm, Auto, calc_var)
 
       Calculates the scattering correlations for a batch of images. Mean are done over pixels.
-mean of modulus:
+      mean of modulus:
                 S1 = <|I * Psi_j3|>
-     Normalization : take the log
-power spectrum:
+		Normalization : take the log
+      power spectrum:
                 P00 = <|I * Psi_j3|^2>
-    Normalization : take the log
-orig. x modulus:
+		Normalization : take the log
+	orig. x modulus:
                 C01 = < (I * Psi)_j3 x (|I * Psi_j2| * Psi_j3)^* >
      Normalization : divide by (P00_j2 * P00_j3)^0.5
-modulus x modulus:
+     modulus x modulus:
                 C11 = <(|I * psi1| * psi3)(|I * psi2| * psi3)^*>
      Normalization : divide by (P00_j1 * P00_j2)^0.5
-Parameters
-----------
-image1: tensor
-    Image on which we compute the scattering coefficients [Nbatch, Npix, 1, 1]
-image2: tensor
-    Second image. If not None, we compute cross-scattering covariance coefficients.
-mask:
-norm: None or str
-    If None no normalization is applied, if 'auto' normalize by the reference P00,
-    if 'self' normalize by the current P00.
-all_cross: False or True
-    If False compute all the coefficient even the Imaginary part,
-    If True return only the terms computable in the auto case.
-Returns
--------
-S1, P00, C01, C11 normalized
 
+     Parameters
+     ----------
+
+     - image1: tensor
+       Image on which we compute the scattering coefficients [Nbatch, Npix, 1, 1]
+     - image2: tensor
+       Second image. If not None, we compute cross-scattering covariance coefficients.
+     - mask:
+     - norm: None or str
+       If None no normalization is applied, if 'auto' normalize by the reference P00,
+       if 'self' normalize by the current P00.
+           all_cross: False or True
+       If False compute all the coefficient even the Imaginary part,
+       If True return only the terms computable in the auto case.
+       
+     Returns
+     -------
+     S1, P00, C01, C11 normalized
+     
    .. method:: clean_norm(self)
 
       Description of the method.
 
    .. method:: _compute_C01(self, j2, conv, vmask, M_dic, MconvPsi_dic, calc_var, return_data)
 
-      Compute the C01 coefficients (auto or cross)
-C01 = < (Ia * Psi)_j3 x (|Ib * Psi_j2| * Psi_j3)^* >_pix
-Parameters
-----------
-Returns
--------
-cc01, sc01: real and imag parts of C01 coeff
+      Internal method not to be used.
 
    .. method:: _compute_C11(self, j1, j2, vmask, M1convPsi_dic, M2convPsi_dic, calc_var, return_data)
 

@@ -32,11 +32,11 @@ Python Module Documentation
        
    .. method:: ud_grade(image,jscale)
 	       
-      return an image with a corresponding *nside* divided by a factor ``2^jscale`` compare to the input ``image`` 
+      return an image with a corresponding nside divided by a factor ``2^jscale`` compare to the input ``image`` 
 
    .. method:: up_grade(image,out_nside)
 	       
-      return an image with a corresponding *nside*=``out_nside`` using bilinear interpolation on ``image`` data.
+      return an image with a corresponding nside=``out_nside`` using bilinear interpolation on ``image`` data.
 
    .. method:: convol(image,axis=0)
 	       
@@ -140,6 +140,10 @@ Python Module Documentation
    .. method:: backend.bk_real(x)
 
       return the real part of the ``x`` data.
+      
+   .. method:: backend.bk_imag(x)
+
+      return the imaginary part of the ``x`` data.
 
    .. method:: backend.bk_conjugate(x)
 

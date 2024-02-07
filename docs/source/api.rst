@@ -4,4 +4,5 @@ API
 .. autosummary::
    :toctree: generated
 
-   foscat
+   scat
+   scat_cov

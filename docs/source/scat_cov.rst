@@ -2,6 +2,9 @@ Python Module Documentation
 =============================
 
 .. class:: funct
+	   
+   Description of the class.
+   
    .. method:: __init__(NORIENT=4,
                KERNELSZ=3,
                all_type='float64',
@@ -27,18 +30,20 @@ Python Module Documentation
      - ``mpi_size=1``  Set the ``size`` of the ``MPI`` run.
      - ``mpi_rank=0`` Set the ``rank`` of the ``MPI`` run.
        
-   Description of the class.
-   
    .. method:: ud_grade(image,jscale)
+	       
       return an image with a corresponding *nside* divided by a factor ``2^jscale`` compare to the input ``image`` 
 
    .. method:: up_grade(image,out_nside)
+	       
       return an image with a corresponding *nside*=``out_nside`` using bilinear interpolation on ``image`` data.
 
    .. method:: convol(image,axis=0)
+	       
       convol the ``image`` by default wavelet defined in ``__init__``. Input dimension is [..,Npix,..], output dimension is [..,Mpix,Norient,..]. Npix is the number of pixels of the ``image``.
       
    .. method:: smooth(image,axis=0)
+	       
       smooth the ``image`` by default symetric wavelet defined in ``__init__``. Input dimension is [..,Npix,..], output dimension is [..,Mpix,..]. Npix is the number of pixels of the ``image``.
 
    .. method:: fill( im, nullval)

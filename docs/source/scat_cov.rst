@@ -36,11 +36,11 @@ Python Module Documentation
 
    .. method:: up_grade(image,out_nside)
 	       
-      return an image with a corresponding nside=``out_nside`` using bilinear interpolation on ``image`` data.
+      return an image with a corresponding nside = ``out_nside`` using bilinear interpolation on ``image`` data.
 
    .. method:: convol(image,axis=0)
 	       
-      convol the ``image`` by default wavelet defined in ``__init__``. Input dimension is [..,Npix,..], output dimension is [..,Mpix,Norient,..]. Npix is the number of pixels of the ``image``.
+      convol the ``image`` by default wavelet defined in ``__init__``. Input dimension is [..,Npix,..], output dimension is [..,Npix,Norient,..]. Npix is the number of pixels of the ``image``.
       
    .. method:: smooth(image,axis=0)
 	       

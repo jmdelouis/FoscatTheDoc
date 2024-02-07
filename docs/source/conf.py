@@ -2,12 +2,12 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'FOSCAT'
+copyright = '2024, Delouis'
+author = 'J.-M. Delouis, T. Foulquier, L. Mousset, T. Odaka, F. Paul, E. Allys'
 
-release = '0.1'
-version = '0.1.0'
+release = '3.0'
+version = '3.0.6'
 
 # -- General configuration
 
